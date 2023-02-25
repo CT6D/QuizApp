@@ -358,7 +358,7 @@ footer {
 
 .widget {
     margin-top: 20px !important;
-    height: 80px;
+
     margin-bottom: 20px !important;
 
     background-color: white;
@@ -484,5 +484,10 @@ img {
 #submitButton {
     outline: none;
 
+    border: none;
+}
+
+.tags {
+    outline: none;
     border: none;
 }
