@@ -1,0 +1,205 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+    color: inherit;
+}
+
+
+a {
+    color: #ff5d8f;
+    font-size: 19px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+$social-button-size: 64px;
+$social-button-icon-size: 0.4;
+$social-button-background: #fff;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
+
+$social-button-colors: (
+    'mail': #0072c6,
+    'facebook': #3b5999,
+    'linkedin': #0077b5,
+    'github': #6e5494,
+    'codepen': #212121,
+    'steam': #7da10e,
+    'snapchat': #eec900,
+    'twitter': #55acee,
+    'instagram': #e4405f,
+    'npmjs': #c12127,
+);
+
+.social-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: $social-button-size;
+    height: $social-button-size;
+    text-decoration: none;
+    border-radius: 100%;
+    background: $social-button-background;
+    text-align: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+        transition: $social-button-transition-time;
+    }
+
+    &:focus,
+    &:hover {
+        color: $social-button-active-color;
+
+        &::after {
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            margin-left: calc(-50% - 1px);
+        }
+    }
+
+    i,
+    svg {
+        position: relative;
+        z-index: 1;
+        transition: $social-button-transition-time;
+    }
+
+    i {
+        font-size: $social-button-size * $social-button-icon-size;
+    }
+
+    svg {
+        height: percentage($social-button-icon-size);
+        width: percentage($social-button-icon-size);
+    }
+
+    @each $name,
+    $color in $social-button-colors {
+        &--#{$name} {
+            color: $color;
+
+            &::after {
+                background: $color;
+            }
+        }
+    }
+}
+
+//** variables
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #ff6392;
+$button-text-color: #fff;
+
+//** root
+:root {
+    background: $background;
+    color: $text;
+    font: 1rem "PT Sans", sans-serif;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+}
+
+a {
+    color: inherit;
+
+    &:hover {}
+}
+
+//** helper
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+//** button
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+
+    &--primary {
+        background: $button-bg-color;
+        color: $button-text-color;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+        border-radius: 2px;
+        padding: 12px 36px;
+
+        &:hover {
+            background: darken($button-bg-color, 4%);
+        }
+
+        &:active {
+            background: $button-bg-color;
+            box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+        }
+    }
+
+    &--inside {
+        margin-left: -96px;
+    }
+}
+
+//** form
+.form {
+    &__field {
+        width: 360px;
+        background: #fff;
+        color: $input-text-color;
+        font: inherit;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+        border: 0;
+        outline: 0;
+        padding: 22px 18px;
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
