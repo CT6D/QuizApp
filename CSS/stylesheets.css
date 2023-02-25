@@ -15,6 +15,10 @@ a {
   gap: 8px;
 }
 
+.flex-direct {
+  flex-direction: initial;
+}
+
 .social-button {
   position: relative;
   display: flex;
