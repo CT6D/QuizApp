@@ -106,7 +106,6 @@ body a:hover {
 }
 
 
-.title {}
 
 footer {
 
@@ -455,7 +454,12 @@ img {
 
 .object-fit {
     width: 800px;
-    max-width: 100%
+    max-width: 100%;
+}
+
+.cardimage {
+    width: 400px;
+    max-width: 100%;
 }
 
 .blogthumb {
@@ -490,4 +494,17 @@ img {
 .tags {
     outline: none;
     border: none;
+}
+
+.price {
+    color: #38b000;
+    font-size: 36px;
+}
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.max-width {
+    max-width: 25rem;
 }
