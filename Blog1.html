@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
 
-    <script src="Script/script.js" type="text/javascript"></script>
+    <script defer src="/Script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="script.js"></script>
+
     <link rel="stylesheet" href="css/ionicons.min.css">
     <link rel="stylesheet" href="CSS/stylesheet.css">
     <link rel="stylesheet" href="CSS/stylesheets.css">
@@ -143,51 +143,15 @@
     </div>
     <h1 class="h1 text-center text-black margin-bottom">Blog Name</h1>
 
-    <div class="container flex-row align-items-start  margin-top">
+    <div class=" container    flex-row align-items-start  margin-top">
         <div class="row">
 
-            <div class="col-4 text-black ">
-
-                <h4 class="h4">Most popular</h4>
-                <p>Blog title</p>
-                <p class="title">25 Feburary, 2023</p>
-                <img src="images/blogpic2.png" class="blogthumb" alt="">
-
-                <div class=" margin-top">
-                    <h4 class="h4">Most recent</h4>
-                    <p>Blog title</p>
-                    <p class="title">25 Feburary, 2023</p>
-                    <div class=" ">
-
-
-                        <img src="images/blogpic3.png" class="blogthumb" alt="">
 
 
 
 
-                    </div>
-
-                </div>
-                <div class=" margin-top">
-                    <h4 class="h4">We recommend</h4>
-                    <p>Blog title</p>
-                    <p class="title">25 Feburary, 2023</p>
-                    <div class=" ">
-
-
-                        <img src="images/blogpic3.png" class="blogthumb" alt="">
-
-
-
-
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="col-8">
-                <div class="">
+            <div class="col">
+                <div class="center">
 
                     <img class="object-fit" src="images/Devcare-Banner-Skin-Care.png" alt="">
 
@@ -212,7 +176,7 @@
                         elit. Doloribus similique veritatis dolor, iste itaque voluptates eligendi veniam consequuntur
                         magnam ab corrupti deserunt nulla. Aspernatur laboriosam at minima, quasi quae quaerat</p>
                     <h4 class="h4 text-black blogtitle ">Blog tags</h4>
-                    <div class="margin-top ">
+                    <div class="margin-top blogTags ">
                         <button class="btn--primary text-decoration-none tags" href="">Skin</button>
                         <button class="btn--primary text-decoration-none tags" href="">Make up</button>
                         <button class="btn--primary text-decoration-none tags" href="">Perfume</button>
@@ -222,7 +186,40 @@
 
             </div>
         </div>
+
     </div>
+
+
+    </div>
+
+
+    <div class="container">
+        <h2 class="h2 text-black margin-top margin-bottom">Our other blogs</h2>
+        <div class="row">
+            <div class="col-4">
+                <h4 class="h4 text-black">Trending</h4>
+                <p class="text-black">Blog title</p>
+                <p class="title">25 Feburary, 2023</p>
+                <img src="images/blogpic2.png" class="blogthumb" alt="">
+
+            </div>
+            <div class="col-4">
+                <h4 class="h4 text-black">Popular</h4>
+                <p class="text-black">Blog title</p>
+                <p class="title">25 Feburary, 2023</p>
+                <img src="images/blogpic3.png" class="blogthumb" alt="">
+
+            </div>
+            <div class="col-4">
+                <h4 class="h4 text-black">Recent</h4>
+                <p class="text-black">Blog title</p>
+                <p class="title">25 Feburary, 2023</p>
+                <img src="images/blogpic5.png" class="blogthumb" alt="">
+
+            </div>
+        </div>
+    </div>
+
 
     <div>
         <footer class="margin-top">
@@ -271,21 +268,21 @@
 
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom ">
 
-        <p class="text-white">Copyright &copy <span id="year">2023</span> <a href="#">@Clementine</a> </p>
+        <p class="text-white">Copyright &copy <span id="year"></span> <a href="#">@Clementine</a> </p>
 
         <div class="footer-menu">
 
             <ul class="f-menu">
 
-                <li><a href="">Home</a></li>
+                <li><a href="index.html">Home</a></li>
 
-                <li><a href="">About</a></li>
+                <li><a class="" href="Shop.html">Shop</a></li>
 
-                <li><a href="">Contact</a></li>
+                <li><a href="Contact.html">Contact</a></li>
 
-                <li><a href="">Blog</a></li>
+                <li><a class="active" href="Blog.html">Blog</a></li>
 
             </ul>
 

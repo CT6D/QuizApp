@@ -1,6 +1,3 @@
-const year = document.getElementById("year");
-
-year.textContent = new Date().getFullYear();
 
 function FbotonOn(msg) {
     var empt = document.forms["sendE"][input].value
@@ -15,3 +12,14 @@ function FbotonOn(msg) {
     } else { document.getElementById("boxBack").classList.remove("show"); }
 
 }
+
+const year = document.getElementById("year");
+
+year.innerText = new Date().getFullYear();
+
+var activepage = window.location.pathname;
+const navFooter = document.querySelectorAll(".footer-menu ul li a").forEach(link => {
+    if (link.href.includes(`${activepage}`)) {
+        link.classList.add("active")
+    }
+})
