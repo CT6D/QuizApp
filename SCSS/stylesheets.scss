@@ -244,3 +244,7 @@ $dark: #4E4E4E;
 .card {
     --bs-card-border-color: $background !important;
 }
+
+.navbar-nav .dropdown-menu {
+    position: absolute !important;
+}
