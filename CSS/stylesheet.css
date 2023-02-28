@@ -539,3 +539,12 @@ img {
     padding: 12px 30px !important;
 
 }
+
+.navbar-nav .dropdown-menu {
+    position: absolute !important;
+}
+
+#signupText {
+    padding: 0 50px;
+    font-size: 16px;
+}
