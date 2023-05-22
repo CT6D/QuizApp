@@ -177,7 +177,7 @@ a {
 }
 
 .form__field {
- 
+  width: 360px;
   background: #fff;
   color: #a3a3a3;
   font: inherit;
@@ -233,5 +233,8 @@ h6 {
 
 .card {
   --bs-card-border-color: $background !important;
-}/*# sourceMappingURL=stylesheets.css.map */
+}
 
+.navbar-nav .dropdown-menu {
+  position: absolute !important;
+}/*# sourceMappingURL=stylesheets.css.map */
