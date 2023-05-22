@@ -74,7 +74,9 @@ body a:hover {
 .image {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90)), url(..//images/creating-perfume-g664cb237b_1920.jpg);
     margin-bottom: 30px;
-    height: 960px;
+    width: 100vw;
+    height: 100vh;
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -84,7 +86,9 @@ body a:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90)), url(..//images/bg2.jpg);
 
 
+    width: 100vw;
     height: 100vh;
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center, right;

@@ -13,6 +13,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
+  padding-bottom: 20px;
 }
 
 .flex-direct {

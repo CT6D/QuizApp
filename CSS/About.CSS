@@ -1,0 +1,361 @@
+@font-face {
+    font-family: "Another-shabby-Light" !important;
+    src: url(Anothershabby_pro_light_v2.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@300;600;700;800;900&display=swap');
+
+
+body {
+    font-family: 'Another shabby light', sans-serif !important;
+
+}
+
+.start {
+    color: #F97608;
+    font-size: 5rem;
+    font-weight: 100;
+
+}
+
+.numbers {
+    text-align: center;
+    margin: 20px 30px;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 30px;
+    max-width: 100%;
+    width: 70px;
+    height: 70px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #5E17EB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.negatives {
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+
+    img {
+
+
+        max-width: 100%;
+
+    }
+
+    .numbers {
+        font-size: 1.5rem;
+        padding: 20px;
+        max-width: 100%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px
+    }
+
+    .negatives {
+        font-size: 0.9rem;
+    }
+
+}
+
+.motive {
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+.motive li {
+
+    list-style: none;
+    margin-bottom: 20px;
+
+}
+
+
+.info {
+
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bolder;
+    color: #ff7a0d;
+    padding: 30px;
+    font-size: 20px;
+    background-color: #FFDCBE;
+    word-spacing: 20px;
+    margin: 30px;
+    height: fit-content;
+
+}
+
+@media screen and (max-width: 700px) {
+
+
+    .info {}
+}
+
+.screens {}
+
+.pastelCover {
+
+    background-image: url(../images/Copie\ de\ Copie\ de\ Pitch\ deck.jpg);
+    width: 100vw;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.motive {
+
+    background-image: url(../Problems\ \(1\).jpg);
+    width: 100vw;
+    height: 100%;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center center;
+}
+
+@media screen and (max-width: 700px) {
+
+
+    .motive {
+        background-image: url(../Mobileversion.jpg);
+        width: 100vw;
+        height: 100%;
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+
+.pastelCover {
+
+    background: url(../images/Copie\ de\ Copie\ de\ Pitch\ deck.jpg);
+    width: 100vw;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.motive h2 {
+    color: #5E17EB;
+}
+
+.motiveHeader {
+    font-size: 6rem;
+
+}
+
+.motive p {
+    font-size: 1.6rem;
+
+}
+
+
+
+.background {
+
+    background-image: url(../Mission.jpg);
+    width: 100vw;
+    height: 100%;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.background h1 {
+    color: #F97608;
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.background p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-background {
+    background-color: #DEC1F6;
+}
+
+.card-background2 {
+    background-color: #FFDCBE;
+
+}
+
+.thumbImage {
+    max-width: 100%;
+    width: 250px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 700px) {
+
+
+    .background h1 {
+        font-size: 3rem;
+    }
+
+    .background p {
+        font-size: 0.8rem;
+    }
+
+}
+
+.homePage {
+    background-image: url(../HomePage.jpg);
+    width: 100vw;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.homePage p {
+    color: #ff7a0d;
+    font-size: 2rem;
+}
+
+.savePlanet {
+    background-image: url(../images/Target\ +\ Brand\ experience.jpg);
+    width: 100vw;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 3.4rem !important;
+    }
+
+    h2 {
+        font-size: 3rem !important;
+    }
+
+    p {
+        font-size: 1.1rem !important;
+    }
+
+    .savePlanet {
+        background-image: url(../images/Copie\ de\ Copie\ de\ Pitch\ deck.jpg);
+        width: 100vw;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: cover;
+        background-position: left, center;
+    }
+
+
+
+}
+
+@media screen and (max-width: 1200px) {
+    #bottomInfo {
+        flex-direction: column-reverse;
+
+    }
+}
+
+.savePlanet h1 {
+    color: #ff7a0d;
+    font-size: 3rem;
+}
+
+.savePlanet p {
+    font-weight: bolder !important;
+
+}
+
+.footer {
+    background-color: #E8D9F4;
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+    height: 500px;
+    width: 100%;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #F97608;
+    font-size: 1rem;
+    color: white;
+
+}
+
+#bottomInfo li {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+#bottomInfo span {
+    margin-right: 10px;
+}
+
+.footer h1 {
+    font-size: 6rem;
+    color: #ff7a0d;
+
+}
+
+.footer p {
+    font-size: 1.8rem;
+}
+
+.footer h2 {
+    color: #ff7a0d;
+    font-size: 3rem;
+}
+
+
+#deserveThisTitle {
+    font-size: 3rem;
+    color: #ff7a0d;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    #deserveThisTitle {
+        color: #ff7a0d;
+
+        font-size: 1.6rem;
+    }
+}
+
+.stars {}
+
+.mask1 {
+    border-top-left-radius: 60% 35%;
+    border-top-right-radius: 60% 35%;
+    width: 570px;
+
+}
