@@ -1,30 +1,3 @@
-// async function getQuestions(){
-//     const quizQuestions = await fetch("https://opentdb.com/api.php?amount=10")
-//     const response = await quizQuestions.json()
-//     let accumlator = 0
-//     const yourQuestion = response.results[accumlator].question
-
-// console.log(response.results)
-//     for (let i = 0; i< response.results.length; i++) {
-//         let choices =  response.results[i].incorrect_answers
-
-//         const questions = [{
-//             question: yourQuestion,
-//             answers: [
-//                 {text: choices, correct: false},
-//                 {text: choices, correct: false},
-//                 {text: response.results[i].correctAnswer, correct: true},
-//                 {text: choices, correct: false},
-//             ]
-//         },
-//         ]
-
-
-
-//     }
-
-// }
-// getQuestions()
 
 
 const questionElement = document.getElementById("question");
@@ -40,13 +13,19 @@ let score = 0;
 
 
 
-function startQuiz() {
+// function startQuiz() {
+//     currentQuestionIndex = 0
+//     score = 0
+//     nextButton.innerHTML = "Next"
+    
+  
+// }
+function startQuiz(){
     currentQuestionIndex = 0
     score = 0
     nextButton.innerHTML = "Next"
-    showQuestion()
+    
 }
-
 
 function resetState() {
     nextButton.style.display = "none"
@@ -55,31 +34,97 @@ function resetState() {
     }
 }
 
+let selection = 0
+async function category(){
+    const category = await fetch("https://opentdb.com/api_category.php")
+    const response = await category.json()
+    const displayIt = document.getElementsByClassName("questionCategory")
+   const select = document.getElementById("category")
+response.trivia_categories.forEach(element => {
+    const opt1 = document.createElement("option")
+opt1.value = element.name
+opt1.text = element.name
+currentQuestionIndex = 0
+score = 0
+nextButton.innerHTML = "Next"
+    select.add(opt1, null)
+   
+});
 
-async function test() {
-    const quizQuestions = await fetch("https://opentdb.com/api.php?amount=10")
-    let response = await quizQuestions.json()
-
-    const data = {
-        response
-    }
-
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json",
-        }
-
-    }
-    console.log(options)
-    const db_response = await fetch("/api", options)
-    const db_json = await db_response.json()
-    console.log(db_json)
-
+return response
 }
 
+category()
+
+let arrayofData = "";
+async function categoryFunction(){
+  
+    const data = await category()
+    const option = document.getElementById("category")
+  
+
+    data.trivia_categories.forEach(element =>  {
+        if (option.value == element.name){
+           num = element.id
+    
+        } 
+    }
+    );
+
+ let getQuestions = await fetch( `https://opentdb.com/api.php?amount=10&category=${num}`)
+ let arrayofData = await getQuestions.json()
+const response = {
+    arrayofData
+}
+
+const options = {
+    method: 'POST',
+           body: JSON.stringify(response),
+            headers: {
+                 "Content-Type": "application/json",
+        }
+    
+}
+
+
+    const db_response = await fetch("/api", options)
+    const db_json = await db_response.json()
+
+    return arrayofData
+}
+
+categoryFunction()
+
+
+selectCategory.addEventListener("click", showQuestion)
+
+
+
+// async function test() {
+//     const quizQuestions = await fetch("https://opentdb.com/api.php?amount=10")
+//     let response = await quizQuestions.json()
+// console.log(response)
+//     const data = {
+//         response
+//     }
+
+//     const options = {
+//         method: 'POST',
+//         body: JSON.stringify(data),
+//         headers: {
+//             "Content-Type": "application/json",
+//         }
+
+//     }
+//     console.log(options)
+//     const db_response = await fetch("/api", options)
+//     const db_json = await db_response.json()
+//     console.log(db_json)
+
+// }
+
 async function getData() {
+
     const response = await fetch("/api")
 
    const data = await response.json()
@@ -93,16 +138,17 @@ return data
 
 
 
-getData()
+
 
  async function showQuestion() {
     resetState()
-let data = await getData()
 
+let data = await categoryFunction()
+console.log(data)
 let questionNo = currentQuestionIndex 
 
-const currentQuestion = data[currentSet].response.results[questionNo]
-console.log()
+const currentQuestion = data.results[currentSet]
+console.log(currentQuestion)
 const correctAnswer = currentQuestion.correct_answer
 const incorrectAnswers = currentQuestion.incorrect_answers
 
@@ -120,8 +166,8 @@ const questions = [{
 
 
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question
- questions[0].answers.sort(() => Math.random() - 0.5)
-    questions[0].answers.forEach(answer => {
+ questions[currentSet].answers.sort(() => Math.random() - 0.5)
+    questions[currentSet].answers.forEach(answer => {
   
         const button = document.createElement("button")
        
@@ -156,7 +202,7 @@ return questions
 
 
 
-async function handleNextButton() {
+ async function handleNextButton() {
     let questions = await showQuestion()
     currentQuestionIndex++
     if (currentQuestionIndex < 9) {

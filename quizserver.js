@@ -3,8 +3,8 @@ const app = express();
 const path = require("path")
 const Datastore = require("nedb")
 app.listen(4000, () => console.log('hello world'))
-app.use(express.static("public"))
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static("docs"))
+app.use(express.static(path.join(__dirname, 'docs')))
 app.use(express.json({ limit: "1mb" }))
 
 
