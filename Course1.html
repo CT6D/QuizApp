@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <script defer src="/Script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <link rel="stylesheet" href="CSS/stylesheets.css">
+    <script src="https://kit.fontawesome.com/536c917c00.js" crossorigin="anonymous"></script>
+    <title>Blog1</title>
+</head>
+
+<style>
+    body {
+        height: auto !important;
+    }
+</style>
+
+<body>
+    <div class="">
+
+        <nav class="navbar navbar-expand-lg navbackground">
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+                <a class="navbar-brand text-white" href="#">Email us: </a>
+
+                <!-- Icons -->
+                <ul class="navbar-nav d-flex flex-row me-1">
+                    <li class="nav-item me-3 me-lg-0"> <a class="nav-link text-white" href="#"><i
+                                class="fas fa-cog mx-1"></i>
+                            Setting
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Language</a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">English</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">French</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Arab</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="">
+            <div class="navbar navbar-expand-lg  navbar-lights d-flex justify-content-end ">
+                <ul class="navbar-nav d-flex align-items-center  me-1 flex-direct">
+                    <li class="nav-item me-3 me-lg-0"> <a class="nav-link text-dark" href="#"><i class=""></i>
+                            <div class="input-group">
+                                <input type="search" class="form-control rounded" placeholder="Search"
+                                    aria-label="Search" aria-describedby="search-addon" />
+                                <button type="button" class="btn btn--inside" style="margin-left: 10px"> <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+
+
+
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link text-dark" href="#"><i class=""></i><svg xmlns="http://www.w3.org/2000/svg"
+                                width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg> </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"> <i class=""></i> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            </svg> </a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">My account</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Icons -->
+            <!-- Container wrapper -->
+            <nav class="d-flex justify-content-center">
+                <!-- Navbar brand -->
+                <ul class="nav align-content-center justify-content-center">
+                    <li class="nav-item acolor">
+                        <a class="nav-pages " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-pages" href="Shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-pages " href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-pages " href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-pages active " href="Courses.html">Courses</a>
+                    </li>
+                </ul>
+
+
+
+
+            </nav>
+
+            <!-- Container wrapper -->
+        </div>
+    </div>
+    <h1 class="h1 text-center text-black margin-bottom">Beginner cosmetic science workshop</h1>
+
+    <div class=" container    flex-row align-items-start  margin-top">
+        <div class="row">
+
+
+            <div class="center">
+
+                <img class="" src="images/Course 1.png" width="700px" alt="">
+
+            </div>
+
+
+            <div class="col center">
+
+
+                <div class=" widget">
+                    <h4 class="h4 title">Program</h4>
+                    <p class="description" style="font-weight: bolder; font-size: 16px;">
+                        This course includes:
+                        16h
+                        Full lifetime access
+                        Access on mobile and TV
+
+                    </p>
+                    <p class=" fs-5" style="color: #27bcda">Module 1:</p>
+                    <ol class="text-black">
+                        <li>How to make cosmetic pH buffers
+                        </li>
+                        <li>How to adjust cosmetic pH</li>
+                        <li>How to write cosmetic formulas</li>
+                        <li>How to make a cosmetic mist/toner</li>
+                        <li>Make: a hydrating mist</li>
+                    </ol>
+
+                    <p class=" fs-5" style="color: #27bcda">Module 2:</p>
+                    <ol class="text-black">
+                        <li>How to make cosmetic cream and lotion formulas
+                        </li>
+                        <li>How to reference inputs of cosmetic ingredients in cosmetic formulas</li>
+                        <li>Make a moisturising body lotion</li>
+                        <li>Make a natural face cream</li>
+                        <li>Make a luxurious natural body butter</li>
+                    </ol>
+                    <p class=" fs-5" style="color: #27bcda">Module 3:</p>
+                    <ol class="text-black">
+                        <li>How to make cosmetic creams with low oil content
+                        </li>
+                        <li>How to stabilise low viscosity emulsions</li>
+                        <li>How to select cosmetic emulsifiers to suit various types of beginner cosmetic formula needs
+                        </li>
+                        <li>Make a natural serum</li>
+                        <li>Make a crème cleanser</li>
+
+                    </ol>
+                    <p class=" fs-5" style="color: #27bcda">Module 4:</p>
+                    <ol class="text-black">
+                        <li>How to make a cosmetic skin cream
+                        </li>
+                        <li>How to write a cosmetic formula method</li>
+
+                    </ol>
+                    <p class=" fs-5" style="color: #27bcda">Module 5:</p>
+                    <ol class="text-black">
+                        <li>How to make cosmetic balms
+                        </li>
+                        <li>How and why ingredients are selected for balms</li>
+                        <li>How to trouble shoot issues with balms and correct them
+                        </li>
+                        <li>Make a lip balm</li>
+
+
+                    </ol>
+                    <p class=" fs-5" style="color: #27bcda">Module 6:</p>
+                    <ol class="text-black">
+                        <li>How to make a natural shampoo
+                        </li>
+                        <li>How to make a natural body wash</li>
+                        <li>How to select cosmetic foaming agents and input amounts
+                        </li>
+                        <li>How to calculate surfactant input to achieve the right performance and foam from your face
+                            wash, body wash and shampoo formulas</li>
+                        <li>How to thicken cosmetic surfactants and foaming formulas
+                        </li>
+                        <li>How to create foaming cosmetic formulas to suit hair, hands, body and face
+                        </li>
+                        Make a face wash
+                        </li>
+                        Make a body wash
+                        </li>
+                        Make a shampoo
+                        </li>
+
+                    </ol>
+                    <p class=" fs-5" style="color: #27bcda">Module 7:</p>
+                    <ol class="text-black">
+                        <li>How to make a conditioner
+                        </li>
+                        <li>How to select hair care ingredients for conditioner formulas</li>
+                        <li>How to stabilise conditioner formulas
+                        </li>
+                        <li>Make a creamy conditioner</li>
+                        <li>How to make a conditioner formula and method
+                        </li>
+                        <li>How to adjust cosmetic ingredient inputs to alter hair care performance characteristics
+
+
+                    </ol>
+
+                    <div class="text-center ">
+                        <p style="color: red; font-size: 24px;">Who should take this course?
+
+                        </p>
+                        <p style="color: #27bcda">People who :</p>
+
+                        <ul class="text-black list-unstyled">
+                            <li> Have a high school diploma or university degree who wish to learn to formulate their
+                                own cosmetic products</li>
+                            <li>are just starting to make their own cosmetic products
+                            </li>
+                            <li> wanting to improve basic cosmetic science skills</li>
+                            <li>looking to make natural skincare formulas and natural haircare formulas using
+                                easy-to-source cosmetic ingredients</li>
+                            <li> wanting to learn basic cosmetic science before committing to a more professional study
+                                program
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="text-center ">
+                        <p style="color: red; font-size: 24px;">Equipment you will need for beginner cosmetic science
+                            workshops:
+                        </p>
+                        <p class="text-black text-center">In order to study the beginner cosmetic science course you
+                            will need
+                            to
+                            purchase or
+                            have access to
+                            standard laboratory equipment; or the following basic equipment if studying from home:
+                        </p>
+                        <ul class="text-black list-unstyled">
+                            <li> Scales that measure up to at least 1.2kg in 0.1g increments.</li>
+                            <li>3 x 1.1L stainless steel mixing bowls.
+                            </li>
+                            <li> 1 x 8 wire whisk (250 – 300mm).</li>
+                            <li> 2 hot plates (or normal stove top).</li>
+                        </ul>
+                        <p class="text-black"><span style="color: red; font-weight: bolder;">Optional:</span> practical
+                            kit with
+                            cosmetic
+                            ingredients to make all
+                            formulas in the workshop series - please purchase separately here</p>
+                    </div>
+
+                    <div class="margin-top blogTags center ">
+                        <button class="btn--primary text-decoration-none tags" href="">Add to cart</button>
+                        <button class="btn--primary text-decoration-none tags" href="">♥</button>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+    <div class="container">
+
+        <h2 class="h2 text-black margin-top margin-bottom">Our other courses</h2>
+        <div class="row">
+            <div class="col-4">
+                <h4 class="h4 text-black">Course 1</h4>
+                <p class="text-black">Beginner cosmetic science workshop</p>
+                <p class="title">Date</p>
+                <img src="images/Course 1.png" class="blogthumb" alt="">
+
+            </div>
+            <div class="col-4">
+                <h4 class="h4 text-black">Course 2</h4>
+                <p class="text-black">Skincare formulation course</p>
+                <p class="title">Date</p>
+                <img src="images/Course 2.jpg" class="blogthumb" alt="">
+
+            </div>
+            <div class="col-4">
+                <h4 class="h4 text-black">Course 3</h4>
+                <p class="text-black">The cosmetic dermatology course</p>
+                <p class="title">Date</p>
+                <img src="images/Course 3.jpg" class="blogthumb" alt="">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <footer class="margin-top">
+
+            <div class="footer-content">
+                <form class="form-group margin-bottom">
+                    <label class="h2" for="exampleInputEmail1" style="color: #ff6392">Newsletter</label>
+
+                    <p class="blockquote">Subscribe to our newsletter to keep up with the latest</p>
+
+                    <div class="bg-color">
+                        <div class="container flex-row justify-content-between">
+                            <form class="form">
+                                <input type="email" class="form__field" placeholder="Your E-Mail Address" />
+                                <button type="button" class="btn btn--primary btn--inside uppercase">Send</button>
+                            </form>
+                        </div>
+
+
+                    </div>
+
+            </div>
+
+            </form>
+
+
+
+            <div class="social-buttons">
+                <a target=”_blank” href="https://www.facebook.com/clementinebeautyscience/"
+                    class="social-button social-button--facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a target=”_blank” href="https://www.instagram.com/clementinebeautytalk/"
+                    class="social-button social-button--instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+
+                    </i>
+                </a>
+                <a target=”_blank” href="#" class="social-button social-button--twitter" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a target=”_blank” href="https://www.tiktok.com/@clementinebeautytalk?lang=en"
+                    class="social-button social-button--instagram" aria-label="Tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+    </div>
+
+    <div class="footer-bottom ">
+
+        <p class="text-white">Copyright &copy <span id="year"></span> <a href="#">@Clementine</a> </p>
+
+        <div class="footer-menu">
+
+            <ul class="f-menu">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a class="" href="Shop.html">Shop</a></li>
+
+                <li><a href="Contact.html">Contact</a></li>
+
+                <li><a class="active" href="Blog.html">Blog</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    </footer>
+
+
+
+    <body>
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    </html>
