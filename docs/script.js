@@ -8,8 +8,9 @@ let currentSet = 0;
 let currentQuestionIndex = 0;
 let score = 0;
 
+// use this to fetch the questions
 
-
+fetch(`https://opentdb.com/api.php?amount=10&category=${num}`).then(response => response.json())
 
 
 
@@ -85,7 +86,7 @@ const finalData = fetchingData()
     select.addEventListener("change", fetchingData)
 selectCategory.addEventListener("click", showQuestion)
 
-
+const fetchData = () =>
 
 
 
