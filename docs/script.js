@@ -74,7 +74,7 @@ const fetchingData = (num)  =>{
 async function showQuestion() {
     resetState()
 let data = await fetchingData()
-   console.log(data)
+
         let questionNo = currentQuestionIndex
 
         const currentQuestion = data.results[currentQuestionIndex]
