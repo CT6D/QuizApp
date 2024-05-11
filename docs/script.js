@@ -61,20 +61,20 @@ const fetchingData = (num)  =>{
         }
         
         )
-        return num
-
+        return fetch(`https://opentdb.com/api.php?amount=10&category=${num}`).then(response => response.json())
     }
 
-const finalData = fetchingData()
-
-    select.addEventListener("change", fetchingData)
-selectCategory.addEventListener("click", showQuestion)
 
 
- async function showQuestion() {
+    // select.addEventListener("change", fetchingData)
+
+
+
+
+async function showQuestion() {
     resetState()
-
-   
+let data = await fetchingData()
+   console.log(data)
         let questionNo = currentQuestionIndex
 
         const currentQuestion = data.results[currentQuestionIndex]
@@ -121,6 +121,8 @@ selectCategory.addEventListener("click", showQuestion)
 
         return questions
     }
+
+    selectCategory.addEventListener("click", showQuestion)
 
 
 function handleNextButton() {
