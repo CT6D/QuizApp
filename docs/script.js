@@ -61,23 +61,27 @@ const fetchingData = (num)  =>{
         }
         
         )
-        return fetch(`https://opentdb.com/api.php?amount=10&category=${num}`).then(response => response.json())
+        return data = fetch(`https://opentdb.com/api.php?amount=10&category=${num}`).then(response => response.json()).then(data => arrofQ.push(data))
     }
 
 
+    const arrofQ = [
 
-    // select.addEventListener("change", fetchingData)
+    
+    ]
+    console.log(arrofQ)
+  select.addEventListener("change", fetchingData)
 
 
 
 
 async function showQuestion() {
     resetState()
-let data = await fetchingData()
-
+let data = arrofQ
+console.log(data)
         let questionNo = currentQuestionIndex
 
-        const currentQuestion = data.results[currentQuestionIndex]
+        const currentQuestion = data[0].results[currentQuestionIndex]
         const correctAnswer = currentQuestion.correct_answer
         const incorrectAnswers = currentQuestion.incorrect_answers
 
