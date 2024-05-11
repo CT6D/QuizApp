@@ -1,5 +1,3 @@
-
-
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answers-btns");
 const nextButton = document.getElementById("next-btn");
@@ -9,9 +7,6 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 // use this to fetch the questions
-
-fetch(`https://opentdb.com/api.php?amount=10&category=${num}`).then(response => response.json())
-
 
 
 
@@ -35,15 +30,11 @@ let displayIt = document.getElementsByClassName("questionCategory")
 let select = document.getElementById("category")
 
 
-let arrayofData = "";
 const categories = {
     trivia_categories:[{"id":9,"name":"General Knowledge"},{"id":10,"name":"Entertainment: Books"},{"id":11,"name":"Entertainment: Film"},{"id":12,"name":"Entertainment: Music"},{"id":13,"name":"Entertainment: Musicals & Theatres"},{"id":14,"name":"Entertainment: Television"},{"id":15,"name":"Entertainment: Video Games"},{"id":16,"name":"Entertainment: Board Games"},{"id":17,"name":"Science & Nature"},{"id":18,"name":"Science: Computers"},{"id":19,"name":"Science: Mathematics"},{"id":20,"name":"Mythology"},{"id":21,"name":"Sports"},{"id":22,"name":"Geography"},{"id":23,"name":"History"},{"id":24,"name":"Politics"},{"id":25,"name":"Art"},{"id":26,"name":"Celebrities"},{"id":27,"name":"Animals"},{"id":28,"name":"Vehicles"},{"id":29,"name":"Entertainment: Comics"},{"id":30,"name":"Science: Gadgets"},{"id":31,"name":"Entertainment: Japanese Anime & Manga"},{"id":32,"name":"Entertainment: Cartoon & Animations"}]}
 
 
 const category = () =>{
-
-    const displayIt = document.getElementsByClassName("questionCategory")
-  
     categories.trivia_categories.forEach(element => {
         const opt1 = document.createElement("option")
         opt1.value = element.name
@@ -57,37 +48,27 @@ const category = () =>{
   
 }
      
- 
-
 
 const categoryPromise = category()
 
 const fetchingData = (num)  =>{
 
         categories.trivia_categories.forEach(element => {
-            console.log(element)
             if (select.value == element.name) {
                 num = element.id
-                console.log(element.id)
-
+       
             }
-
         }
         
         )
-
         return num
 
-      
     }
 
 const finalData = fetchingData()
 
     select.addEventListener("change", fetchingData)
 selectCategory.addEventListener("click", showQuestion)
-
-const fetchData = () =>
-
 
 
  async function showQuestion() {
@@ -97,7 +78,6 @@ const fetchData = () =>
         let questionNo = currentQuestionIndex
 
         const currentQuestion = data.results[currentQuestionIndex]
-        console.log(currentQuestion.question)
         const correctAnswer = currentQuestion.correct_answer
         const incorrectAnswers = currentQuestion.incorrect_answers
 
@@ -143,15 +123,6 @@ const fetchData = () =>
     }
 
 
-
-
-
-
-
-
-
-
-
 function handleNextButton() {
 
     currentQuestionIndex++
@@ -163,7 +134,6 @@ function handleNextButton() {
 }
 
 nextButton.addEventListener("click", async () => {
-    let questions = await showQuestion()
     if (currentQuestionIndex < 9) {
         handleNextButton()
     } else {
@@ -190,8 +160,6 @@ function selectAnswer(e) {
     nextButton.style.display = "block"
 }
 async function showScore() {
-    let questions = await showQuestion()
-
     resetState()
     questionElement.innerHTML = `You scored ${score} out of ${9}`
     nextButton.innerHTML = "Play again"
@@ -200,7 +168,6 @@ async function showScore() {
 }
 
 async function nextSet() {
-    let questions = await showQuestion()
     resetState()
     currentSet++
     nextButton.innerHTML = "Next"
@@ -211,21 +178,3 @@ async function nextSet() {
 
 setofQuestions.addEventListener("click", nextSet)
 startQuiz()
-
-//  function handleNextButton() {
-// currentQuestionIndex++
-//     if (currentQuestionIndex < questions.length) {
-//         showQuestion()
-//      } else {
-//          showScore()
-//      }
-//  }
-
-
-// nextButton.addEventListener("click", () => {
-//      if (currentQuestionIndex < questions.length) {
-//          handleNextButton()
-//      } else {
-//          startQuiz()
-//      }
-//  })
